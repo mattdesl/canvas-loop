@@ -1,6 +1,6 @@
 {
   "name": "canvas-fit-loop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "minimal canvas loop and DPR scale boilerplate",
   "main": "index.js",
   "license": "MIT",
