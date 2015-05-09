@@ -2,7 +2,7 @@
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
-<iframe scrolling="no" border="0" frameBorder="0" src="http://mattdesl.github.io/canvas-fit-loop/" height="400" width="720"><img src="http://i.imgur.com/o4DFpz0.png" /></iframe> 
+[![demo](http://i.imgur.com/o4DFpz0.png)](http://mattdesl.github.io/canvas-fit-loop/)
 
 [demo](http://mattdesl.github.io/canvas-fit-loop/) - [source](demo.es6)
 
