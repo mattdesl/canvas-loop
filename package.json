@@ -30,7 +30,7 @@
   "scripts": {
     "test": "browserify test.js | tap-closer | smokestack | faucet",
     "start": "budo demo.es6:bundle.js --live --verbose -- -t babelify | garnish",
-    "build": "browserify index.js | uglifyjs -cm > bundle.js"
+    "build": "browserify demo.es6 -t babelify > bundle.js"
   },
   "keywords": [
     "canvas",
