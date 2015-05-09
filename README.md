@@ -4,7 +4,7 @@
 
 ![demo](http://i.imgur.com/o4DFpz0.png)
 
-[(click for demo)](http://mattdesl.github.io/canvas-fit-loop/)
+[demo](http://mattdesl.github.io/canvas-fit-loop/) - [source](demo.es6)
 
 Yet another canvas shell utility, built on [canvas-fit](https://npmjs.org/package/canvas-fit) and [raf-loop](https://npmjs.org/package/raf-loop). Useful for full-screen retina canvas demos.
 
