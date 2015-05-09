@@ -2,22 +2,32 @@ var view = require('./')
 var test = require('tape')
 
 test('yet another canvas context shell utility', function(t) {
-  var el = document.createElement('canvas')
-  var ctx = el.getContext('2d')
+  var canvas = document.createElement('canvas')
 
-  t.plan(1)
-  var app = view(ctx)
+  var desired = [ 50, 50 ]
+  
+  t.plan(3)
+  var app = view(canvas, {
+    parent: function() {
+      return desired
+    }
+  })
 
-  t.equal(typeof app.size, 'number', 'has width')
-  t.equal(typeof app.height, 'number', 'has height')
+  t.deepEqual(app.shape, desired, 'has width/height')
 
   app.start()
   app.on('tick', function(dt) {
     t.equal(typeof dt, 'number', 'provides tick with dt')
     app.stop()
   })
-  app.once('resize', function(size) {
-    t.equal(typeof size.width, 'number', 'got width')
-    t.equal(typeof size.height, 'number', 'got height')
+
+  app.once('resize', function() {
+    t.deepEqual(app.shape, desired, 'shape has changed')
   })
+
+  setTimeout(function() {
+    desired = [10, 10]
+    window.dispatchEvent(new Event('resize'))
+  }, 100)
+
 })

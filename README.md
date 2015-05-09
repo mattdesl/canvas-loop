@@ -2,57 +2,54 @@
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
+![demo](http://i.imgur.com/o4DFpz0.png)
+
 Yet another canvas shell utility, built on [canvas-fit](https://npmjs.org/package/canvas-fit) and [raf-loop](https://npmjs.org/package/raf-loop). Useful for full-screen retina canvas demos.
 
 Example:
 
 ```js
-var createContext = require('2d-context')
+var createGL = require('webgl-context')
 var createLoop = require('canvas-fit-loop')
 
-//get a 2D context
-var context = createContext()
-var canvas = context.canvas
+// get a WebGL context
+var gl = createGL()
+var canvas = gl.canvas
 document.body.appendChild(canvas)
 
-//setup a retina-scaled canvas
+// setup a retina-scaled canvas
 var app = createLoop(canvas, {
   scale: window.devicePixelRatio
 })
 
-//start rendering
+// start rendering
 app.start()
 
-//on requestAnimationFrame
+// on requestAnimationFrame
 app.on('tick', function(dt) {
-  // get unscaled size
+  // do some rendering
+  gl.clear(gl.COLOR_BUFFER_BIT)
+})
+
+// handle window resize
+app.on('resize', function() {
+  // the unscaled size
   var width = app.shape[0]
   var height = app.shape[1]
 
-  // scale for retina displays
-  ctx.save()
-  ctx.scale(app.scale, app.scale)
-
-  // draw with screen-space coordinates
-  ctx.clearRect(0, 0, width, height)
-  ctx.fillRect(25, 25, width/2, height/2)
-
-  ctx.restore()
-})
-
-//on window resize
-app.on('resize', function() {
-  console.log('new size', app.shape)
+  console.log('new canvas size', width, height)
 })
 ```
+
+See [demo.es6](demo.es6) for a full demo.
 
 ## Usage
 
 [![NPM](https://nodei.co/npm/canvas-fit-loop.png)](https://www.npmjs.com/package/canvas-fit-loop)
 
-#### `app = createLoop(context[, opt])`
+#### `app = createLoop(canvas[, opt])`
 
-Creates a new loop with the given Canvas `context` (can be [2D](https://www.npmjs.com/package/2d-context) or [WebGL](https://www.npmjs.com/package/webgl-context)). 
+Creates a new loop with the given `canvas` (can be [2D](https://www.npmjs.com/package/2d-context) or [WebGL](https://www.npmjs.com/package/webgl-context)). 
 
 The options:
 
