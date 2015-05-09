@@ -2,7 +2,8 @@
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
-<iframe scrolling="no" border="0" frameBorder="0" src="http://mattdesl.github.io/canvas-fit-loop/" height="400" width="720"><a href="http://mattdesl.github.io/canvas-fit-loop/">(demo)</a></iframe> 
+<iframe scrolling="no" border="0" frameBorder="0" src="http://mattdesl.github.io/canvas-fit-loop/" height="400" width="720">![demo](http://i.imgur.com/o4DFpz0.png)</iframe> 
+
 [demo](http://mattdesl.github.io/canvas-fit-loop/) - [source](demo.es6)
 
 Yet another canvas shell utility, built on [canvas-fit](https://npmjs.org/package/canvas-fit) and [raf-loop](https://npmjs.org/package/raf-loop). Useful for full-screen retina canvas demos.
