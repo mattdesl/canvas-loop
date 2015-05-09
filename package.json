@@ -1,0 +1,54 @@
+{
+  "name": "canvas-fit-loop",
+  "version": "1.0.0",
+  "description": "minimal canvas loop and DPR scale boilerplate",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "canvas-fit": "^1.4.0",
+    "raf-loop": "^1.1.0"
+  },
+  "devDependencies": {
+    "2d-context": "^1.2.0",
+    "babelify": "^6.0.2",
+    "browserify": "^10.1.3",
+    "budo": "^4.0.0",
+    "eases": "^1.0.6",
+    "garnish": "^2.1.3",
+    "lerp": "^1.0.3",
+    "tape": "^4.0.0",
+    "uglify-js": "^2.4.21"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "start": "budo demo.es6:bundle.js --live --verbose -- -t babelify | garnish",
+    "build": "browserify index.js | uglifyjs -cm > bundle.js"
+  },
+  "keywords": [
+    "canvas",
+    "shell",
+    "context",
+    "2d",
+    "webgl",
+    "glsl",
+    "gl",
+    "fit",
+    "fitter",
+    "raf",
+    "loop",
+    "render"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/canvas-fit-loop.git"
+  },
+  "homepage": "https://github.com/mattdesl/canvas-fit-loop",
+  "bugs": {
+    "url": "https://github.com/mattdesl/canvas-fit-loop/issues"
+  }
+}
