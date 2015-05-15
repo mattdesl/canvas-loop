@@ -1,5 +1,5 @@
 {
-  "name": "canvas-fit-loop",
+  "name": "canvas-loop",
   "version": "1.0.3",
   "description": "canvas loop/scale utility",
   "main": "index.js",
@@ -48,10 +48,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mattdesl/canvas-fit-loop.git"
+    "url": "git://github.com/mattdesl/canvas-loop.git"
   },
-  "homepage": "https://github.com/mattdesl/canvas-fit-loop",
+  "homepage": "https://github.com/mattdesl/canvas-loop",
   "bugs": {
-    "url": "https://github.com/mattdesl/canvas-fit-loop/issues"
+    "url": "https://github.com/mattdesl/canvas-loop/issues"
   }
 }

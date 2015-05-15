@@ -1,12 +1,10 @@
-# canvas-fit-loop
+# canvas-loop
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
-### renamed to [canvas-loop](https://www.npmjs.com/package/canvas-loop)
+[![demo](http://i.imgur.com/o4DFpz0.png)](http://mattdesl.github.io/canvas-loop/)
 
-[![demo](http://i.imgur.com/o4DFpz0.png)](http://mattdesl.github.io/canvas-fit-loop/)
-
-[demo](http://mattdesl.github.io/canvas-fit-loop/) - [source](demo.es6)
+[demo](http://mattdesl.github.io/canvas-loop/) - [source](demo.es6)
 
 Yet another canvas shell utility, built on [canvas-fit](https://npmjs.org/package/canvas-fit) and [raf-loop](https://npmjs.org/package/raf-loop). Useful for full-screen retina canvas demos.
 
@@ -14,7 +12,7 @@ Example:
 
 ```js
 var createGL = require('webgl-context')
-var createLoop = require('canvas-fit-loop')
+var createLoop = require('canvas-loop')
 
 // get a WebGL context
 var gl = createGL()
@@ -49,7 +47,7 @@ See [demo.es6](demo.es6) for a full demo.
 
 ## Usage
 
-[![NPM](https://nodei.co/npm/canvas-fit-loop.png)](https://www.npmjs.com/package/canvas-fit-loop)
+[![NPM](https://nodei.co/npm/canvas-loop.png)](https://www.npmjs.com/package/canvas-loop)
 
 #### `app = createLoop(canvas[, opt])`
 
@@ -90,4 +88,4 @@ Getters/setters to change `parent` or `scale` at runtime. See [canvas-fit](https
 
 ## License
 
-MIT, see [LICENSE.md](http://github.com/mattdesl/canvas-fit-loop/blob/master/LICENSE.md) for details.
+MIT, see [LICENSE.md](http://github.com/mattdesl/canvas-loop/blob/master/LICENSE.md) for details.
