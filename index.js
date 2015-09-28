@@ -2,8 +2,8 @@ var fitter = require('canvas-fit')
 var loop = require('raf-loop')
 
 module.exports = function(canvas, opt) {
+  if (!canvas) throw new TypeError('must specify a canvas element')
   opt = opt||{}
-  
   var fit = fitter(canvas, opt.parent, opt.scale)
   var app = loop()
   var shape = [0, 0]
