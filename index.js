@@ -1,39 +1,42 @@
 var fitter = require('canvas-fit')
 var loop = require('raf-loop')
 
-module.exports = function(canvas, opt) {
-  if (!canvas) throw new TypeError('must specify a canvas element')
-  opt = opt||{}
+module.exports = function (canvas, opt) {
+  if (!canvas) {
+    throw new TypeError('must specify a canvas element')
+  }
+  
+  opt = opt || {}
   var fit = fitter(canvas, opt.parent, opt.scale)
   var app = loop()
   var shape = [0, 0]
 
   resize()
 
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     resize()
     app.emit('resize')
   }, false)
 
   Object.defineProperties(app, {
     scale: {
-      get: function() {
+      get: function () {
         return fit.scale
       },
-      set: function(s) {
+      set: function (s) {
         fit.scale = s
       }
     },
     shape: {
-      get: function() {
+      get: function () {
         return shape
       }
     },
     parent: {
-      get: function() {
+      get: function () {
         return fit.parent
       },
-      set: function(p) {
+      set: function (p) {
         fit.parent = p
       }
     }
@@ -41,7 +44,7 @@ module.exports = function(canvas, opt) {
 
   return app
 
-  function resize() {
+  function resize () {
     fit()
     var deviceWidth = canvas.width
     var deviceHeight = canvas.height
