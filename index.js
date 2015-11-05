@@ -7,9 +7,7 @@ module.exports = function (canvas, opt) {
   }
   
   opt = opt || {}
-  var parent = opt.parent || defaultParent
-  
-  var fit = fitter(canvas, parent, opt.scale)
+  var fit = fitter(canvas, opt.parent, opt.scale)
   var app = loop()
   var shape = [0, 0]
 
@@ -53,10 +51,4 @@ module.exports = function (canvas, opt) {
     shape[0] = deviceWidth / fit.scale
     shape[1] = deviceHeight / fit.scale
   }
-}
-
-
-function defaultParent () {
-  var element = document.documentElement
-  return [ element.clientWidth, element.clientHeight ]
 }
